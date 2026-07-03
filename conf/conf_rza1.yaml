@@ -1,0 +1,13 @@
+src_mac: "02:0F:1E:3D:5C:7B"
+dst_mac: "FF:FF:FF:FF:FF:FF"
+iface: "eth0"
+goCBRef: "GOOSEControlBlock1"
+datSet: "DataSet1"
+goID: "GOOSE_ID_1"
+confRev: 1
+
+initial_values:
+  alarm_state: false
+  current: 12.3
+  voltage: 220.0
+  power: 2.7
