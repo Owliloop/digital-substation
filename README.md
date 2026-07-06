@@ -17,26 +17,52 @@
 
 ```
 .
-├── src/
-│   ├── mod_emulator.py
-│   ├── rza_emulator.py
-│   ├── goose_gen.py
-│   ├── matrix_and_scenarios.py
-│   ├── predict.py
-│   └── ...
+├── base version/
+│   ├── src/
+│   │   ├── mod_emulator.py
+│   │   ├── rza_emulator.py
+│   │   ├── goose_gen.py
+│   │   ├── matrix_and_scenarios.py
+│   │   ├── predict.py
+│   │    └── ...
+│   │
+│   ├── conf/
+│   │   ├── conf_mod.yaml
+│   │   ├── conf_rza1.yaml
+│   │   ├── conf_rza2.yaml
+│   │    └── ...
+│   │
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   ├── requirements.txt
 │
-├── conf/
-│   ├── conf_mod.yaml
-│   ├── conf_rza1.yaml
-│   ├── conf_rza2.yaml
-│   └── ...
+├── modified version\
+│   ├── src/
+│   │   ├──attack_DoS.py
+│   │   ├──attack_evasion.py
+│   │   ├──attack_masquerade.py
+│   │   ├──attack_silence.py
+│   │   ├──attack_stnum.py
+│   │   ├── mod_emulator.py
+│   │   ├── rza_emulator.py
+│   │   ├── goose_gen.py
+│   │   ├── matrix_and_scenarios.py
+│   │   ├── predict.py
+│   │    └── ...
+│   │
+│   ├── conf/
+│   │   ├── conf_mod.yaml
+│   │   ├── conf_rza1.yaml
+│   │   ├── conf_rza2.yaml
+│   │    └── ...
+│   │
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   ├── requirements.txt
 │
-├── scripts/
 │
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
 └── README.md
+
 ```
 
 ---
@@ -135,9 +161,19 @@ src/mod_emulator.py
 - отправить ложный GOOSE.
 - и т.д
 
+
+В нашем случае было реализованы:
+Сценарий 1: Атака "Обход детектора" (Data Evasion)
+Сценарий 2: Атака "Подмена источника" (Masquerade / Spoofing)
+Сценарий 2: Атака "Подмена источника" (Masquerade / Spoofing)
+Сценарий 4: Атака "Тишина в эфире" (Silence / DoS via Heartbeat)
+Сценарий 5: DoS Атака
+
+Для их заупска необходимо вместо заупска эмулятора rza в docker_compose, запустить атаку.
 ---
 
 ## Авторы
 Owliloop
-
+Шнырь
+Сон Гоку
 ...
