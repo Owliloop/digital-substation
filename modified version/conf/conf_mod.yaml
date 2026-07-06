@@ -1,0 +1,19 @@
+src_mac: "02:1A:2B:3C:4D:5E"
+dst_mac: "FF:FF:FF:FF:FF:FF"
+iface: "eth0"
+goCBRef: "ModCell1/LLN0Gogcb01"
+datSet: "ModCell1/LLN0$Go1"
+goID: "ModCell1_goose"
+confRev: 1
+
+subscribed_rzas:
+  - GOOSEControlBlock1
+  - GOOSEControlBlock2
+  - GOOSEControlBlock3
+
+expected_macs:
+    GOOSEControlBlock1: "02:0F:1E:3D:5C:7B"
+    GOOSEControlBlock2: "02:0F:1E:3D:5C:7C"
+    GOOSEControlBlock3: "02:0F:1E:3D:5C:7D"
+
+potential_subscribed_rzas:

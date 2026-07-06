@@ -1,0 +1,6 @@
+scapy
+PyYAML
+openpyxl
+numpy
+tensorflow
+pandas
